@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA619ED7-CC29-4C91-952F-7864FFD208CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RelayMgr</RootNamespace>
+    <AssemblyName>RelayMgr</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>xtremeip Icon 32.ico</ApplicationIcon>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <ManifestCertificateThumbprint>9A821F37CF45C4F83A49648C8CA2612457EB6149</ManifestCertificateThumbprint>
+    <ManifestKeyFile>RelayMgr_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.80.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\sqlite-netFx-source-1.0.80.0\bin\2008\Win32\ReleaseStatic\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorize.cs" />
+    <Compile Include="DBMgr\DBiCoreVal.cs" />
+    <Compile Include="DevTypeViewItem.cs" />
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iCore_Value.cs" />
+    <Compile Include="Localization.cs" />
+    <Compile Include="DBMgr\DBDevices.cs" />
+    <Compile Include="DBMgr\DBDevType.cs" />
+    <Compile Include="DBMgr\DBPool.cs" />
+    <Compile Include="DBMgr\DBUsers.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAction.Designer.cs">
+      <DependentUpon>frmAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTask.Designer.cs">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnection.Designer.cs">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDebug.Designer.cs">
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDev.designer.cs">
+      <DependentUpon>frmDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevType.designer.cs">
+      <DependentUpon>frmDevType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPool.Designer.cs">
+      <DependentUpon>frmPool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPWD.Designer.cs">
+      <DependentUpon>frmPWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystem.Designer.cs">
+      <DependentUpon>frmSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iniFile.cs" />
+    <Compile Include="libZPlay.cs" />
+    <Compile Include="myAddress.cs" />
+    <Compile Include="DevListViewItem.cs" />
+    <Compile Include="RegionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegionControl.designer.cs">
+      <DependentUpon>RegionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relay.cs" />
+    <Compile Include="RelayMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelayMgr.Designer.cs">
+      <DependentUpon>RelayMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAction.resx">
+      <DependentUpon>frmAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTask.resx">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnection.resx">
+      <DependentUpon>frmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDebug.resx">
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDev.resx">
+      <DependentUpon>frmDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevType.resx">
+      <DependentUpon>frmDevType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPool.resx">
+      <DependentUpon>frmPool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPWD.resx">
+      <DependentUpon>frmPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystem.resx">
+      <DependentUpon>frmSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionControl.resx">
+      <DependentUpon>RegionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelayMgr.resx">
+      <DependentUpon>RelayMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iCore.resx">
+      <DependentUpon>iCore.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RelayMgr_TemporaryKey.pfx" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SocketPoolItem.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashAppContext.cs" />
+    <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="Tasks.cs" />
+    <Compile Include="DBMgr\DBTasks.cs" />
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VItemListViewItem.cs" />
+    <Compile Include="DBMgr\DBVItems.cs" />
+    <Compile Include="DBMgr\DBCommands.cs" />
+    <Compile Include="WorkerClass.cs" />
+    <Compile Include="iCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iCore.designer.cs">
+      <DependentUpon>iCore.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0030550155.jpg" />
+    <None Include="Resources\TasksScheduler.gif" />
+    <None Include="Resources\095Z13A0-0.jpg" />
+    <Content Include="bin\Release\resources\lang-en.xml" />
+    <Content Include="lang-zh.xml" />
+    <Content Include="xtremeip Icon 32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.9.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ 运行库 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheckBoxEx\CheckBoxEx.csproj">
+      <Project>{F80131F4-E4E1-40E3-A7B6-7ACA4A65EAB4}</Project>
+      <Name>CheckBoxEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListViewEx\ListViewEx.csproj">
+      <Project>{96ED1D90-62CC-4AF2-A368-24FCC5D9FD7F}</Project>
+      <Name>ListViewEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PopupControlHost\PopupControlHost.csproj">
+      <Project>{F7D79091-8142-4394-8DBB-DEF79C01D114}</Project>
+      <Name>PopupControlHost</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

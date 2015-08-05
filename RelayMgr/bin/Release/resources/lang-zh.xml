@@ -1,0 +1,105 @@
+<?xml version = "1.0" encoding = "gb2312"?>
+<AirControl language="简体中文">
+  <Menu>
+    <File>
+      <Item id="0" key="mnu_File" value="文件" />
+      <Item id="1" key="mnu_BeginListen" value="连接" />
+      <Item id="2" key="mnu_Exit" value="退出" />
+    </File>
+    <View>
+      <Item id="0" key="mnu_View" value="查看" />
+      <Item id="1" key="mnu_TaskMgr" value="任务管理器" />
+      <Item id="2" key="mnu_InputMgr" value="输入项目" />
+      <Item id="3" key="mnu_ShowTimer" value="显示时钟" />
+    </View>
+    <Settings>
+      <Item id="0" key="mnu_Settings" value="设置" />
+      <Item id="1" key="mnu_System" value="系统设置" />
+      <Item id="2" key="mnu_pool" value="连接池设置" />
+      <Item id="2" key="mnu_ConnecSetting" value="连接设置" />
+    </Settings>
+    <Help>
+      <Item id="0" key="mnu_Help" value="帮助" />
+      <Item id="1" key="mnu_About" value="关于..." />
+      <Item id="2" key="mnu_Help_Me" value="帮助" />
+    </Help>
+  </Menu>
+  <Toolbar>
+    <Statusbar>
+      <!--<Item id="1" key="StatusItem1" value="用户名: " />
+      <Item id="2" key="StatusItem2" value="用户组: " />
+      <Item id="3" key="StatusItem3" value="上次登录时间: " />
+      <Item id="4" key="StatusItem4" value="本次登录时间:" />-->
+    </Statusbar>
+  </Toolbar>
+  <Form>
+    <RelayMgr>
+      <Item id="0" key="RelayMgr" value="xx" />
+      <Item id="1" key="btnBeginListen" value="连接" />
+      <Item id="2" key="btnEndListen" value="断开" />
+      <Item id="3" key="btnRefresh" value="刷新" />
+      <Item id="4" key="btnPowerON" value="启动(单项)" />
+      <Item id="5" key="btnPowerOFF" value="关闭(单项)" />
+      <Item id="6" key="btnPowerONAll" value="全部启动(界面)" />
+      <Item id="7" key="btnPowerOFFAll" value="全部关闭(界面)" />
+      <Item id="8" key="btnPowerON_Board" value="全部启动(板卡)" />
+      <Item id="9" key="btnPowerOFF_Board" value="全部关闭(板卡)" />
+      <Item id="10" key="btnPowerON_BUS" value="全部启动(总线)" />
+      <Item id="11" key="btnPowerOFF_BUS" value="全部关闭(总线)" />
+      <Item id="12" key="gb_quickConn" value="快速连接" />
+      <Item id="13" key="label2" value="指令发送延时：" />
+      <Item id="14" key="label3" value="毫秒" />
+      <Item id="15" key="rbCOM" value="串口" />
+      <Item id="16" key="rbNetWork" value="网络" />
+      <Item id="17" key="label1" value="端口:" />
+      <Item id="18" key="label9" value="分组" />
+      <Item id="19" key="label10" value="输出项目" />
+      <Item id="20" key="tabPage1" value="输出项目" />
+      <Item id="21" key="tabPage2" value="虚拟按钮" />
+      <Item id="22" key="label4" value="图例：" />
+      <Item id="23" key="label5" value="关闭" />
+      <Item id="24" key="label6" value="启动" />
+      <Item id="25" key="label7" value="未知" />
+      <Item id="26" key="label11" value="输入项目" />
+      <Item id="27" key="cb_AllowAction" value="允许联动" />
+      <Item id="28" key="btn_Lockthis" value="锁定" />
+      <Item id="29" key="btnClose" value="退出" />
+      <Item id="30" key="btn_TaskRun" value="运行任务" />
+      <Item id="31" key="btn_TaskStop" value="停止运行" />
+      <Item id="32" key="ch_itemName" value="项目" />
+      <Item id="33" key="ch_TaskTime" value="时间" />
+      <Item id="34" key="ch_taskType" value="任务类型" />
+      <Item id="35" key="ch_Action" value="动作" />
+      <Item id="35" key="lbl_Connected" value="连接关闭" />
+    </RelayMgr>
+    <frmPWD>
+      <Item id="0" key="frmPWD" value="" />
+      <Item id="1" key="btn_UnLock"  value="解锁" />
+      <Item id="2" key="btn_Cancel" value="取消" />
+      <Item id="3" key="label2" value="解锁码：" />
+    </frmPWD>
+    <ChangePasswordForm>
+      <Item id="0" key="ChangePasswordForm" value="修改密码" />
+      <Item id="1" key="label1" value="原密码" />
+      <Item id="2" key="label2" value="新密码" />
+      <Item id="3" key="label3" value="再输入" />
+      <Item id="4" key="buttonConfirm" value="确认" />
+      <Item id="5" key="buttonCancel" value="取消" />
+    </ChangePasswordForm>
+  </Form>
+  <Dialog>
+    <Title>
+      <Item id="0" key="0001" value="xx" />
+      <Item id="1" key="0002" value="添加测试" />
+      <Item id="2" key="0003" value="添加用户" />
+      <Item id="3" key="0004" value="修改密码" />
+    </Title>
+    <Message>
+      <Item id="0" key="0000" value="一切正常" />
+      <Item id="1" key="2001" value="用户名或密码错误" />
+      <Item id="5" key="2002" value="密码不一致" />
+      <Item id="6" key="2003" value="用户名已存在" />
+      <Item id="7" key="2004" value="添加用户成功" />
+    </Message>
+  </Dialog>
+</AirControl>

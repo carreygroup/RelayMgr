@@ -1,0 +1,7 @@
+bin\Debug\ListViewEx.dll
+bin\Debug\ListViewEx.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CSharpWin.Properties.Resources.resources
+obj\Debug\ListViewEx.csproj.GenerateResource.Cache
+obj\Debug\ListViewEx.dll
+obj\Debug\ListViewEx.pdb

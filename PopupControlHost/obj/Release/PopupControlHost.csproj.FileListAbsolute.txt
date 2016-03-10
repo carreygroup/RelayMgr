@@ -1,0 +1,5 @@
+D:\Project\iTron\trunk\Software\RelayMgr\PopupControlHost\bin\Release\PopupControlHost.dll
+D:\Project\iTron\trunk\Software\RelayMgr\PopupControlHost\bin\Release\PopupControlHost.pdb
+D:\Project\iTron\trunk\Software\RelayMgr\PopupControlHost\obj\Release\ResolveAssemblyReference.cache
+D:\Project\iTron\trunk\Software\RelayMgr\PopupControlHost\obj\Release\PopupControlHost.dll
+D:\Project\iTron\trunk\Software\RelayMgr\PopupControlHost\obj\Release\PopupControlHost.pdb

@@ -139,13 +139,6 @@ namespace RelayMgr
 
             LangMenuAndToolbar();
 
-            m_isDemo = Demo;
-            if (Demo)
-            {
-                //tab_Control.TabPages.Remove(tp);
-                mnu_pool.Visible = false;
-            }
-            
             UID = user;
 
             if (UID.Equals("user"))
@@ -296,10 +289,10 @@ namespace RelayMgr
         private void RelayMgr_Load(object sender, EventArgs e)
         {
             //if (!m_isDemo)
-            {
-                btn_Lockthis.Visible = true;
-                ShowLockScreen(true);
-            }
+            //{
+            //    btn_Lockthis.Visible = true;
+            //    ShowLockScreen(true);
+            //}
         }
         /// <summary>
         /// 读入连接配置

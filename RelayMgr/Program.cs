@@ -13,43 +13,24 @@ namespace RelayMgr
         static void Main(string[] args)
         {
             AddForm();
-            //if (Authorize.GetValidityUUID(Authorize.GetLicense()))
-            //{
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                string user = string.Empty;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            string user = string.Empty;
 
-                if (args.Length == 0)
-                {
-                    user = "user";
-                }
-                else
-                {
-                    if (args[0] == "token")
-                    {
-                        user = "admin";
-                    }
-                }
-                //user = "admin";
-                SplashAppContext context = new SplashAppContext(new RelayMgr(false,user), new Splash());
-                Application.Run(context);
-            //}
-            //else if (Authorize.GetValidityDemo(Authorize.GetLicense()))
+            //if (args.Length == 0)
             //{
-            //    Application.EnableVisualStyles();
-            //    Application.SetCompatibleTextRenderingDefault(false);
-            //    SplashAppContext context = new SplashAppContext(new RelayMgr(true), new Splash());
-            //    Application.Run(context);
+            //    user = "user";
             //}
             //else
             //{
-            //    Application.EnableVisualStyles();
-            //    Application.SetCompatibleTextRenderingDefault(false);
-            //    Application.Run(new frmAbout("授权已失效，更多信息请联系工程商"));
-
+            //    if (args[0] == "token")
+            //    {
+            //        user = "admin";
+            //    }
             //}
-
-            
+            user = "admin";
+            SplashAppContext context = new SplashAppContext(new RelayMgr(false, user), new Splash());
+            Application.Run(context);
         }
 
         //添加所有窗体用于本地化(按XML中顺序)

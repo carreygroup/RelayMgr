@@ -1,0 +1,5 @@
+D:\Project\iTron\trunk\Software\RelayMgr\CheckBoxEx\bin\Release\CheckBoxEx.dll
+D:\Project\iTron\trunk\Software\RelayMgr\CheckBoxEx\bin\Release\CheckBoxEx.pdb
+D:\Project\iTron\trunk\Software\RelayMgr\CheckBoxEx\obj\Release\ResolveAssemblyReference.cache
+D:\Project\iTron\trunk\Software\RelayMgr\CheckBoxEx\obj\Release\CheckBoxEx.dll
+D:\Project\iTron\trunk\Software\RelayMgr\CheckBoxEx\obj\Release\CheckBoxEx.pdb

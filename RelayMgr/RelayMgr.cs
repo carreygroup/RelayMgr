@@ -553,8 +553,8 @@ namespace RelayMgr
                     }
                 }
             }
-            timer_INQUIRE.Interval = 100;
-            timer_INQUIRE.Enabled = true;
+            //timer_INQUIRE.Interval = 100;
+            //timer_INQUIRE.Enabled = true;
         }
         /// <summary>
         /// 装载输出设备列表
@@ -1799,6 +1799,7 @@ namespace RelayMgr
         //终止
         private void Abort()
         {
+            thread_run = false;
             try
             {
                 if (m_UsePool)
@@ -2441,6 +2442,7 @@ namespace RelayMgr
         /// </summary>
         private Socket socketClient = null;
         Thread threadClient = null;
+        bool thread_run = false;
         public bool TCP_Connect(string IP, string Port)
         {
             try
@@ -2472,6 +2474,7 @@ namespace RelayMgr
                 socketClient.Connect(endpoint);
                 //new一个新线程 调用下面的接受服务端发来信息的方法RecMsg
                 threadClient = new Thread(RecMsg);
+                thread_run = true;
                 //将窗体线程设置为与后台同步
                 threadClient.IsBackground = true;
                 //启动线程
@@ -2491,7 +2494,7 @@ namespace RelayMgr
         //定义一个接受服务端发来信息的方法
         private void RecMsg()
         {
-            while (true) //持续监听服务端发来的消息
+            while (thread_run) //持续监听服务端发来的消息
             {
                 try
                 {
@@ -2543,7 +2546,8 @@ namespace RelayMgr
                 UDP_IP = strDomain;
             } 
 
-            UDPThread = new Thread(new ThreadStart(ThreadCallBack));
+            UDPThread = new Thread(ThreadCallBack);
+            thread_run = true;
             UDPThread.Start();
             interfaceUpdataHandle = new HandleInterfaceUpdataDelegate(SetDevState);
         }
@@ -2554,7 +2558,7 @@ namespace RelayMgr
         {
             UDPSVR = new UdpClient(UDP_Server_Port);
             iep = new IPEndPoint(IPAddress.Any, UDP_Server_Port);
-            while (true)
+            while (thread_run)
             {
                 byte[] bData = UDPSVR.Receive(ref iep);
                 this.Invoke(interfaceUpdataHandle, bData);
@@ -2566,6 +2570,7 @@ namespace RelayMgr
 
         private void UDPServer_Stop()
         {
+            thread_run = false;
             if (UDPSVR != null)
             {
                 UDPSVR.Close();
@@ -3431,6 +3436,11 @@ namespace RelayMgr
                 cb_Band.Enabled = false;
                 cb_SerialPort.Enabled = false;
             }
+        }
+
+        private void RelayMgr_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Abort();
         }
 
     }

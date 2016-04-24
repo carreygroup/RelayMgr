@@ -879,14 +879,14 @@
             // mnu_About
             // 
             this.mnu_About.Name = "mnu_About";
-            this.mnu_About.Size = new System.Drawing.Size(152, 22);
+            this.mnu_About.Size = new System.Drawing.Size(109, 22);
             this.mnu_About.Text = "关于...";
             this.mnu_About.Click += new System.EventHandler(this.mnu_About_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(106, 6);
             // 
             // timer_INQUIRE
             // 
@@ -1654,6 +1654,7 @@
             this.Text = "智能开关管理 - 北京凯睿瑞驰科技有限公司";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelayMgr_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RelayMgr_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RelayMgr.exe" size="2248704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RelayMgr.exe" size="2249216">
       <assemblyIdentity name="RelayMgr" version="3.9.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>hN5ZOaOp96J76ytU0c6Y6sScq7Y=</dsig:DigestValue>
+        <dsig:DigestValue>H/af8rJUToPG/ljOHgDiFHBEiPY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

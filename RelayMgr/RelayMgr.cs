@@ -52,7 +52,7 @@ namespace RelayMgr
 
         //private static string PORT_NAME = "COM1";
         private static SerialPort serialPort = null;
-
+        private static bool m_connected = false;
         private static int m_Hour = 0;
         //private static SerialPort PostSP = null;
 
@@ -1536,6 +1536,7 @@ namespace RelayMgr
         /// <param name="e"></param>
         private void btnBeginListen_Click(object sender, EventArgs e)
         {
+            m_connected = true;
             BeginListen();
         }
         /// <summary>
@@ -1545,36 +1546,50 @@ namespace RelayMgr
         /// <param name="e"></param>
         private void btnEndListen_Click(object sender, EventArgs e)
         {
+            m_connected = false;
             EndListen();
         }
         private void EndListen()
         {
-            Abort();
-
-            btnBeginListen.Enabled = true;
-            btnEndListen.Enabled = false;
-
-            EnableBtn(false);
-            timer_INQUIRE.Enabled = false;
-            UnknownStatus();
-            EnableBtn(false);
-            timer_watchdog.Enabled = false;
-            if (!m_UsePool)
+            if (m_connected)
             {
-                if (rb_COM.Checked)
+                timer_INQUIRE.Enabled = false;
+                timer_watchdog.Enabled = false;
+                Abort();
+                BeginListen();
+                timer_INQUIRE.Enabled = true;
+                timer_watchdog.Enabled = true;
+
+            }
+            else
+            {
+                Abort();
+
+                btnBeginListen.Enabled = true;
+                btnEndListen.Enabled = false;
+
+                EnableBtn(false);
+                timer_INQUIRE.Enabled = false;
+                UnknownStatus();
+                EnableBtn(false);
+                timer_watchdog.Enabled = false;
+                if (!m_UsePool)
                 {
-                    rb_COM.Enabled = true;
-                    cb_SerialPort.Enabled = true;
-                    rb_TCP.Enabled = true;
-                    rb_UDP.Enabled = true;
-                }
-                else
-                {
-                    rb_COM.Enabled = true;
-                    rb_TCP.Enabled = true;
-                    rb_UDP.Enabled = true;
-                    txtIP.Enabled = true;
-                    txtPort.Enabled = true;
+                    if (rb_COM.Checked)
+                    {
+                        rb_COM.Enabled = true;
+                        cb_SerialPort.Enabled = true;
+                        rb_TCP.Enabled = true;
+                        rb_UDP.Enabled = true;
+                    }
+                    else
+                    {
+                        rb_COM.Enabled = true;
+                        rb_TCP.Enabled = true;
+                        rb_UDP.Enabled = true;
+                        txtIP.Enabled = true;
+                        txtPort.Enabled = true;
+                    }
                 }
             }
         }
